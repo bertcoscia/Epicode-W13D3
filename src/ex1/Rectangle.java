@@ -2,11 +2,11 @@ package ex1;
 
 public class Rectangle {
     private double length;
-    private double width;
+    private double height;
 
-    public Rectangle(double length, double width) {
+    public Rectangle(double length, double height) {
         this.length = length;
-        this.width = width;
+        this.height = height;
     }
 
     public static void printTwoRectangles(Rectangle rect1, Rectangle rect2) {
@@ -19,15 +19,16 @@ public class Rectangle {
     }
 
     public double perimeter() {
-        return this.length * 2 + this.width * 2;
+        return this.length * 2 + this.height * 2;
     }
 
     public double area() {
-        return this.length * this.width;
+        return this.length * this.height;
     }
 
     public void printRectangle() {
         System.out.println(this.perimeter());
         System.out.println(this.area());
     }
+
 }

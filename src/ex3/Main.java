@@ -10,14 +10,10 @@ public class Main {
         User user3 = new User("Linus", "Torvalds", "linus@linux.fi");
 
         Chart user1Chart = user1.createChart();
-        System.out.println(user1Chart);
-
         art1.addToChart(user1Chart);
         System.out.println(user1Chart);
 
         Chart user2Chart = user2.createChart();
-        System.out.println(user2Chart);
-
         art2.addToChart(user2Chart);
         System.out.println(user2Chart);
 
