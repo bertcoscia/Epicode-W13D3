@@ -18,7 +18,6 @@ public class SIM {
         Random random = new Random();
         int duration = random.nextInt(1, 25);
         PhoneCall call = new PhoneCall(this.getNumber(), Integer.toString(duration), calledNumber.getNumber());
-        System.out.println(call);
         PhoneCall[] newLastFiveCalls = new PhoneCall[5];
         for (int i = 0; i < 4; i++) {
             newLastFiveCalls[i] = this.lastFiveCalls[i + 1];

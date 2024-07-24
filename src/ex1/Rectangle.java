@@ -30,5 +30,4 @@ public class Rectangle {
         System.out.println(this.perimeter());
         System.out.println(this.area());
     }
-
 }
