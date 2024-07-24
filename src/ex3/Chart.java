@@ -9,13 +9,13 @@ public class Chart {
 
     public Chart(User user) {
         this.user = user;
-        this.articles = new Article[10];
+        this.articles = new Article[2];
         this.totalPrice = 0;
     }
 
     @Override
     public String toString() {
-        return "Chart{" +
+        return "Chart " + user.getName() + " " + user.getSurname() + " = {" +
                 "user=" + user +
                 ", articles=" + Arrays.toString(articles) +
                 ", totalPrice=" + totalPrice +
@@ -28,5 +28,21 @@ public class Chart {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Article[] getArticles() {
+        return articles;
+    }
+
+    public void setArticles(Article[] articles) {
+        this.articles = articles;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

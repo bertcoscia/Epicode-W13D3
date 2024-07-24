@@ -18,12 +18,22 @@ public class Article {
 
     @Override
     public String toString() {
-        return "Article{" +
+        return description + " = {" +
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", numAvailable=" + numAvailable +
                 '}';
+    }
+
+    public void addToChart(Chart chart) {
+        Article[] newArticles = new Article[2];
+        for (int i = 0; i < 1; i++) {
+            newArticles[i] = chart.getArticles()[i + 1];
+        }
+        newArticles[1] = this;
+        chart.setArticles(newArticles);
+        chart.setTotalPrice(chart.getTotalPrice() + this.price);
     }
 
     public String getDescription() {
